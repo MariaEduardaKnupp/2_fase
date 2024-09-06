@@ -19,8 +19,9 @@ else if(prestacao < calculo2){
 }
 }
   return (
-    <div>
-      <button onClick={emprestimo}>Emprestimo</button>
+    <div className="func">
+      <h1>Emprestimo</h1>
+      <button onClick={emprestimo}>Calcular</button>
     </div>
   )
 }

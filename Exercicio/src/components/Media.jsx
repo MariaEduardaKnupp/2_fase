@@ -14,7 +14,7 @@ function calcularMedia(){
 
   return (
     <div className="Media-container">
-      <h2>Exercício para calcular média de dois números</h2>
+      <h1>Média</h1>
       <button onClick={calcularMedia}>Calcular</button>
       <div>
        Média: {resultado}

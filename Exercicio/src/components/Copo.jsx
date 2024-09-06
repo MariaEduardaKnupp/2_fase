@@ -18,7 +18,8 @@ function Copo() {
         setResultado(numb)
     }
   return (
-    <div>
+    <div className="Copo">
+      <h1>Analise dos números</h1>
       <button onClick={analise}>Número</button>
 
       <div>

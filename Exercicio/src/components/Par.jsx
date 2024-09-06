@@ -35,7 +35,8 @@ function ParP() {
 }   
 
   return (
-    <div>
+    <div className="par">
+      <h1>Par ou Impar</h1>
       <button onClick={ParP}>Conferir</button>
     <div>
       Seu número é: {resultado}

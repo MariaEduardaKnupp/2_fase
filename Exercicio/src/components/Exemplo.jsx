@@ -12,7 +12,8 @@ function Exemplo() {
     }
 
   return (
-    <div>
+    <div className="ex">
+      <h1>Exemplo</h1>
       <button onClick={diminuir}>-</button>
       {resultado}
       <button onClick={aumentar}>+</button>
