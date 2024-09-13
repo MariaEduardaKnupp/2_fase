@@ -9,6 +9,7 @@ import UberStar from './components/UberStar'
 import Comerciante from './components/Comerciante'
 import Notas from './components/Notas'
 import Porquinho from './components/Porquinho'
+import DiaSemana from './components/DiaSemana'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <>
-      <Exemplo />
+      {/* <Exemplo />
       <Media />
       <Copo />
       <Par />
@@ -24,7 +25,8 @@ function App() {
       <UberStar />
       <Comerciante />
       <Notas />
-      <Porquinho />
+      <Porquinho /> */}
+      <DiaSemana />
     </>
   )
 }
