@@ -10,6 +10,8 @@ import Comerciante from './components/Comerciante'
 import Notas from './components/Notas'
 import Porquinho from './components/Porquinho'
 import DiaSemana from './components/DiaSemana'
+import Juca from './components/Juca'
+import Altura from './components/Altura'
 
 
 function App() {
@@ -25,8 +27,11 @@ function App() {
       <UberStar />
       <Comerciante />
       <Notas />
-      <Porquinho /> */}
+      <Porquinho /> 
       <DiaSemana />
+      <Juca /> */
+      <Altura />
+  }
     </>
   )
 }
