@@ -1,41 +1,64 @@
-import { useState } from "react"
+import { useState } from "react";
 
 function Altura() {
+  const [inputAltura, setInputAltura] = useState('');
+  const [inputGenero, setInputGenero] = useState('');
+  const [maiorAltura, setMaiorAltura] = useState(0);
+  const [menorAltura, setMenorAltura] = useState(999);
+  const [contHomens, setContHomens] = useState(0);
+  const [contMulheres, setContMulheres] = useState(0);
 
-    const [alto, setAlto] = useState()
-    
-function pedro(){
-let enzo = 140
-let valentina = 150
-let anos = 0
+  function Pesquisa() {
+    const altura = parseInt(inputAltura);
 
-do{
+    if (altura > maiorAltura) {
+      setMaiorAltura(altura);
+    }
 
-    enzo +=3
-    valentina +=2
-    anos +=1
-    
-    
-    alert("esperando")
-    
-}while(enzo < valentina)
+    if (altura < menorAltura) {
+      setMenorAltura(altura);
+    }
 
-alert(`o enzo vai estar maior maior que valentina em ${anos}`)
-setAlto(anos)
+    if (inputGenero === "homem") {
+      setContHomens(contHomens + 1);
+    }
+    if (inputGenero === "mulher") {
+      setContMulheres(contMulheres + 1);
+    }
 
+    // Limpar os campos após análise
+    setInputAltura('');
+    setInputGenero('');
+  }
 
-
-
-
-}
-      return (
+  return (
     <div>
-      <h1>ENZO E VALENTINA</h1>
-<button onClick={pedro}>QUANTOS ANOS O ENZO VAI ESTAR MAIOR QUE VALENTINA</button>
-anos
-{alto}
+      <h1>Pesquisa de Habitantes</h1>
+      <h3>Gênero</h3>
+      <input
+        type="text"
+        value={inputGenero}
+        onChange={(event) => setInputGenero(event.target.value)}
+      />
+      <h3>Altura</h3>
+      <input
+        type="number"  // Usar number para alturas
+        value={inputAltura}
+        onChange={(event) => setInputAltura(event.target.value)}
+      />
+      <br /><br />
+      <button onClick={Pesquisa}>Analisar</button>
+
+      <div>
+        <h2>Resultados</h2>
+        <p>Maior altura: {maiorAltura} cm</p>
+        <p>Menor altura: {menorAltura} cm</p>
+        <p>Total de homens: {contHomens}</p>
+        <p>Total de mulheres: {contMulheres}</p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Altura
+export default Altura;
+
